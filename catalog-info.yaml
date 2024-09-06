@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: znt64rzvi-python-gitops
+  description: This is GitOps manifest for znt64rzvi-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: znt64rzvi-python
+    janus-idp.io/tekton: znt64rzvi-python
+    backstage.io/kubernetes-id: znt64rzvi-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:znt64rzvi-python
